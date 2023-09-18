@@ -1,22 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stles.css">
     <title>Calculadora NPS</title>
 </head>
 <body>
-    <h1>Avalie o seu atendimento:</h1>
-    <h2>Qual nota você dá para o vendedor?</h2>
-    <p>
-        <section>
-            <option value="10 á 9"> Atendimento Ótimo</option>
-            <option value="8 á 7"> Atendimento Bom</option>
-            <option value="6 á 6"> Atendimento Razoável</option>
-            <option value="4 á 2"> Atendimento Ruim</option>
-            <option value="1 á 0"> Atendimento Péssimo</option>
-        </section>
-    </p>
+    <div id="container">
+  <div>
+    <h1 class="title">Avalie o seu atendimento:</h1>
+
+    <form class="tipsForm">
+    <label for="qualnota">
+        <p>Qual nota você dá para o vendedor?</p>      
+    </label>
+       <p>
+        <select name="qualnota" id="qualnota" class="FormInput">
+        <option disabled selected>-- Escolha uma opção -- </option>
+        <option>9 á 10 - Atendimento Ótimo</option>
+        <option>8 á 7 - Atendimento Bom</option>
+        <option>6 á 5 - Atendimento Razoável</option>
+        <option>4 á 2 - Atendimento Ruim</option>
+        <option>1 á 0 - Atendimento Péssimo</option>
+        </select>
+       </p>
+
     
+        <label for="voltaria">
+
+            <p>Você compraria novamente com o vendedor?</p>
+        </label>
+            <p>
+            <select name="voltaria" id="voltaria" class="FormInput">
+
+                <option>Sim</option>
+                <option>Não</option>
+            </select>
+            </p>
+      
+        <label for="loja">
+            <p>Qual a chance de você recomendar a loja para amigos?</p>
+        </label>
+        <p>
+            <select name="loja" id="loja" class="FormInput">
+            <option disabled selected>-- Escolha uma opção --</option>
+            <option>100%</option>
+            <option>80%</option>
+            <option>50%</option>
+            <option>30%</option>
+            <option>10%</option>
+            <option>0%</option>
+        </select>
+    </p>
+    <button type="submit" class="FormSubmit" >Enviar.</button>
+    </form>
+  </div> 
+  </div>
 </body>
 </html>
