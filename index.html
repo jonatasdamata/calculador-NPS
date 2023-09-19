@@ -3,59 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stles.css">
-    <title>Calculadora NPS</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>NPS</title>
 </head>
 <body>
     <div id="container">
-  <div>
-    <h1 class="title">Avalie o seu atendimento:</h1>
+    <div>
+        <h1 class="title">AVALIE O SEU ATENDIMENTO:</h1>
+    </div> 
+    <div>
+        <form class="tipsForm" id="tipsForm"> 
+            <label for="bill">
+                <img src="IMAGENS/image-removebg-preview - 2023-09-18T211635.913.png";
 
-    <form class="tipsForm">
-    <label for="qualnota">
-        <p>Qual nota você dá para o vendedor?</p>      
-    </label>
-       <p>
-        <select name="qualnota" id="qualnota" class="FormInput">
-        <option disabled selected>-- Escolha uma opção -- </option>
-        <option>9 á 10 - Atendimento Ótimo</option>
-        <option>8 á 7 - Atendimento Bom</option>
-        <option>6 á 5 - Atendimento Razoável</option>
-        <option>4 á 2 - Atendimento Ruim</option>
-        <option>1 á 0 - Atendimento Péssimo</option>
-        </select>
-       </p>
+                <p> 
+                    <br>Qual nota você dá para o atendimento do vendedor?
 
-    
-        <label for="voltaria">
+                </p>
 
-            <p>Você compraria novamente com o vendedor?</p>
-        </label>
-            <p>
-            <select name="voltaria" id="voltaria" class="FormInput">
+                </label>
+                <p>
+                    <select name="serviceQual" id="serviceQual" class="FormSelect" required>
+                        <option disabled selected>-- Escolha uma opção</option>
+                        <option value="10">Atendimento ótimo - 10-9 </option>
+                        <option value="8">Atendimento Bom - 8-7 </option>
+                        <option value="6">Atendimento Razoável - 6-5 </option>
+                        <option value="4">Atendimento Ruim - 4-2 </option>
+                        <option value="1">Atendimento Péssimo - 1-0 </option>
+                    </select>
+                </p>
+                <label for="people">
+                    <p>Você compraria novamente com o vendedor?</p>
+                </label>
+                <p>
+                    <select name="compraria" id="compraria" class="CompraiaOuNao">
+                        <option disabled selected>-- Escolha uma opção</option>
+                        <option value="10"> Sim </option>
+                        <option value="1"> Não </option>
+                    </select>
+                </p>
+                <p>
+                    Você indicaria a loja para amigos?
+                </p>
+                <select name="Indicaria" id="Indiciaria">
+                      <option value="10">Sim</option>
+                      <option value="1">Não</option>
 
-                <option>Sim</option>
-                <option>Não</option>
-            </select>
-            </p>
-      
-        <label for="loja">
-            <p>Qual a chance de você recomendar a loja para amigos?</p>
-        </label>
-        <p>
-            <select name="loja" id="loja" class="FormInput">
-            <option disabled selected>-- Escolha uma opção --</option>
-            <option>100%</option>
-            <option>80%</option>
-            <option>50%</option>
-            <option>30%</option>
-            <option>10%</option>
-            <option>0%</option>
-        </select>
-    </p>
-    <button type="submit" class="FormSubmit" >Enviar.</button>
-    </form>
-  </div> 
+                </select>
+
+                <button type="submit" class="FormSubmit" >Enviar!</button>      
+        </form>
+    </div>
+    <div id="NotaTotal">
+      A NOTA FOI:
+      <span id="tip"></span>
+    </div>
   </div>
+  <script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
